@@ -1,0 +1,349 @@
+#content {
+    display: grid;
+    grid-template-columns: 150px repeat(4,1fr);
+    grid-row: auto;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    grid-column: 1/6;
+    background-color: rgb(240, 140, 0);
+    height: 80px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+h4 {     
+    margin-top: 18px;
+    padding-left: 5px;
+    line-height: 0;
+}
+
+nav {
+    font-size: 20px;
+    min-height: 150px;
+    width: 150px;
+    grid-column: 1/2;
+    grid-row: 2/4;
+    background-color: rgb(240, 140, 0);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+nav a {
+    text-align: left;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+nav a:hover {
+    display: block;
+    height: 10px;
+    padding-bottom: 20px;
+    padding-top: 3px;
+    background: rgb(245, 210,120);
+    border-radius: 5px;
+}
+
+article {
+    text-align: justify;
+    padding: 0px 20px 0px 20px;
+    padding-bottom: 20px;
+    grid-column: 2/6;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+footer {
+    display: flex;
+    grid-column: 1/6;
+    grid-row: 4/5;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    background-color: rgb(240, 140, 0);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+footer div {
+    flex-grow: 5;
+    text-align: right;
+}
+
+footer img {
+    height: 80px;
+    padding: 10px;
+}
+
+/*Navigoinnin oikealla
+muut itemit jakavat
+jäljelle jääneen tilan
+tasaisesti.
+Itemit voivat olla
+suoraan linkkejä.
+Linkeillä on seuraavat
+ominaisuudet:
+• Taustakuva(cover)
+• Teksti
+• Fonttikoko 30px
+• Korkeus 200px
+• 20px tai 10px reunaviiva*/
+
+
+.brave {
+    background-image: url(../Images/cat.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    height: 200px;
+    font-size: 30px;
+    text-align: right;
+    text-decoration: none;
+    grid-column: 2/3;
+    color: rgb(255, 255, 255);
+    border: 10px solid rgb(240, 140, 0);
+    border-radius: 5px;
+}
+
+.brave:hover {
+border: 10px solid rgb(240, 140, 0);
+}
+
+.intelligent {
+    background-image: url(../Images/light.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    height: 200px;
+    font-size: 30px;
+    grid-column: 3/4;
+    text-align: right;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 10px solid rgb(240, 140, 0);
+    border-radius: 5px;
+}
+
+.intelligent:hover {
+border: 10px solid rgb(255, 0, 105);
+
+}
+
+.fair {
+    background-image: url(../Images/judge.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    height: 200px;
+    font-size: 30px;
+    grid-column:4/5;
+    text-align: right;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 10px solid rgb(240, 140, 0);
+    border-radius: 5px;
+}
+
+.fair:hover {
+    border: 10px solid rgb(0, 175, 215);
+}
+
+.responsible {
+    background-image: url(../Images/eco.jpg);
+    background-size: cover;
+    box-sizing: border-box;
+    height: 200px;
+    font-size: 30px;
+    text-align: right;
+    text-decoration: none;
+    grid-column: 5/6;
+    color: rgb(255, 255, 255);
+    border: 10px solid rgb(240, 140, 0);
+    border-radius: 5px;
+}
+
+.responsible:hover {
+    border: 10px solid rgb(45, 170, 55);
+
+}
+
+/*768 ja sitä kapeammat näytöt*/
+
+/*Teema-itemit muuttuvat viemään 3 saraketta.
+
+Taustakuva muuttuu rohkea-teeman haaleaksi taustaväriksi
+
+Border 2px musta
+
+Fontti 1em lihavoitu
+
+Teksti keskelle*/
+
+/*Alapalkin logo piilotetaan*/
+
+@media screen and (max-width: 768px) {
+
+    nav {
+    grid-row: 2/7;
+    }
+
+    footer {
+    grid-row: 7/8;
+    }
+
+    article {
+    grid-row: 6/7;
+    }
+
+    .brave {
+        grid-column: 2/6;
+        height: fit-content;
+        background-image: none;
+        background-color: rgb(235, 210, 120);
+        text-align: center;
+        border: 2px solid black;
+        font-size: 1em;
+        font-weight: bold;
+        color: black;
+    }
+
+    .brave:hover {
+        background-color: rgb(240, 140, 0);
+        border: 2px solid rgb(240, 140, 0);
+    }
+
+    .intelligent {
+        grid-column: 2/6;
+        height: fit-content;
+        background-image: none;
+        background-color: rgb(235, 210, 120);
+        text-align: center;
+        border: 2px solid black;
+        font-size: 1em;
+        font-weight: bold;
+        color: black;
+    }
+
+    .intelligent:hover {
+        background-color: rgb(240, 140, 0);
+        border: 2px solid rgb(255, 0, 105);
+    }
+
+    .fair {
+        grid-column: 2/6;
+        height: fit-content;
+        background-image: none;
+        background-color: rgb(235, 210, 120);
+        text-align: center;
+        border: 2px solid black;
+        font-size: 1em;
+        font-weight: bold;
+        color: black;
+    }
+
+    
+    .fair:hover {
+        background-color: rgb(240, 140, 0);
+        border: 2px solid rgb(0, 175, 215);
+    }
+
+    .responsible {
+        grid-column: 2/6;
+        height: fit-content;
+        background-image: none;
+        background-color: rgb(235, 210, 120);
+        text-align: center;
+        border: 2px solid black;
+        font-size: 1em;
+        font-weight: bold;
+        color: black;
+    }
+
+    .responsible:hover {
+    background-color: rgb(240, 140, 0);
+    border: 2px solid rgb(45, 170, 55);
+    }
+
+    footer img {
+    display: none;
+    }
+
+
+}
+
+
+/*576px ja sitä kapeammat näytöt*/
+
+/*Navigointipalkin leveys
+20px ja sisältö piilotettu, ja
+sijoitetaan absoluuttisesti
+sopivaan kohtaan
+vasemmalle.
+
+Teema-itemit ja artikkeli
+asetetaan viemään nyt
+kaikki sarakkeet.*/
+
+@media screen and (max-width: 576px) {
+    nav {
+    grid-row: 2/6;
+    position: absolute;
+    display: block;
+    font-size: 0;
+    top: 110px;
+    width: 20px;
+    }
+
+    nav:hover {
+    width: 150px;
+    font-size: 20px;
+    }
+
+
+    article {
+    grid-column: 1/6;
+    }
+
+    .brave {
+    grid-column: 1/6;
+    }
+
+    .intelligent {
+    grid-column: 1/6
+    }
+
+    .fair {
+    grid-column: 1/6
+    }
+
+    .responsible {
+    grid-column: 1/6
+    }
+
+
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
